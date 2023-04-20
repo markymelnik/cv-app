@@ -42,6 +42,13 @@
   cursor: pointer;
 }
 
+.edit-header-name {
+  border: none;
+  text-align: center;
+  font-size: 25px;
+  background-color: lightgrey;
+}
+
 .header-info {
   display: flex;
   flex-direction: row;
@@ -50,6 +57,23 @@
   height: 20px;
   width: 100%;
 }
+
+.header-subinfo {
+  font-size: 15px;
+}
+
+.header-subinfo:hover {
+  background: lightgrey;
+  cursor: pointer;
+}
+
+.edit-header-subinfo {
+  border: none;
+  text-align: center;
+  font-size: 15px;
+  background-color: lightgrey;
+}
+
 
 .resume-education {
   display: flex;
@@ -67,6 +91,25 @@
   flex-direction: row;
   justify-content: space-between; 
 }
+
+.education-info {
+  font-size: 15px;
+}
+
+.education-info:hover {
+  background: lightgrey;
+  cursor: pointer;
+}
+
+.edit-education-info {
+  border: none;
+  text-align: left;
+  font-size: 15px;
+  background-color: lightgrey;
+}
+
+
+
 
 .resume-experience {
   display: flex;
@@ -89,6 +132,8 @@
   flex-direction: row;
   justify-content: space-between;
 }
+
+
 
 .resume-skills {
   display: flex;

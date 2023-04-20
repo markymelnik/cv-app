@@ -1,7 +1,7 @@
 import Header from './HeaderSection/Header';
-import Education from './Education';
-import Experience from './Experience';
-import Skills from './Skills';
+import Education from './EducationSection/Education';
+import Experience from './ExperienceSection/Experience';
+import Skills from './SkillsSection/Skills';
 
 const Page = () => {
   return (

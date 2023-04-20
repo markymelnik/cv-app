@@ -1,6 +1,6 @@
 import React from 'react';
 
-const EditField = ({ value, onTextChange }) => {
+const EditHeaderField = ({ value, onTextChange, textClass, inputClass }) => {
 
   const [editing, setEditing] = React.useState(false);
   const [newText, setNewText] = React.useState(value);
@@ -23,12 +23,13 @@ const EditField = ({ value, onTextChange }) => {
   return (
     <>
       {editing ? (
-        <input type='text' value={newText} onChange={handleChange} onKeyDown={handleSave}/>
+        <input type='text' value={newText} onChange={handleChange} onKeyDown={handleSave} className={inputClass}/>
       ) : (
-        <div className='edit-field' onClick={handleEdit}>{value}</div>
+        <div onClick={handleEdit} className={textClass}>{value}</div>
       )}
     </>
   )
+  
 }
 
-export default EditField;
+export default EditHeaderField;
