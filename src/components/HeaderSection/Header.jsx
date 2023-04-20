@@ -1,6 +1,5 @@
 import React from 'react';
-import Name from './Name';
-import Email from './Email';
+import EditField from './EditField';
 
 const Header = () => {
 
@@ -17,15 +16,23 @@ const Header = () => {
     setEmail(newText);
   }
 
+  const handlePhoneNumberChange = (newText) => {
+    setPhoneNumber(newText);
+  }
+
+  const handleWebsiteChange = (newText) => {
+    setWebsite(newText);
+  }
+
   return (
     <div className='resume-header'>
-      <Name name={name} editName={handleNameChange}/>
+      <EditField value={name} onTextChange={handleNameChange}/>
       <div className='header-info'>
-        <Email email={email} editEmail={handleEmailChange}/>
+        <EditField value={email} onTextChange={handleEmailChange}/>
         <span>|</span>
-        <div className='info-number'>Number</div>
+        <EditField value={phoneNumber} onTextChange={handlePhoneNumberChange}/>
         <span>|</span>
-        <div className='info-website'>Website</div>
+        <EditField value={website} onTextChange={handleWebsiteChange}/>
       </div>
     </div>
   )
