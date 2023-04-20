@@ -1,5 +1,5 @@
 import React from 'react';
-import EditHeaderField from './EditHeaderField';
+import EditField from '../EditField';
 
 const Header = () => {
 
@@ -26,28 +26,28 @@ const Header = () => {
 
   return (
     <div className='resume-header'>
-      <EditHeaderField 
+      <EditField 
         value={name} 
         onTextChange={handleNameChange}
         textClass='header-name'
         inputClass='edit-header-name'
       />
       <div className='header-info'>
-        <EditHeaderField 
+        <EditField 
           value={email} 
           onTextChange={handleEmailChange}
           textClass='header-subinfo'
           inputClass='edit-header-subinfo'
         />
         <span>|</span>
-        <EditHeaderField 
+        <EditField 
           value={phoneNumber} 
           onTextChange={handlePhoneNumberChange}
           textClass='header-subinfo'
           inputClass='edit-header-subinfo'
         />
         <span>|</span>
-        <EditHeaderField 
+        <EditField 
           value={website} 
           onTextChange={handleWebsiteChange}
           textClass='header-subinfo'

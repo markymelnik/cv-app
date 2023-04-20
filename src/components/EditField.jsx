@@ -1,6 +1,6 @@
 import React from 'react';
 
-const EditHeaderField = ({ value, onTextChange, textClass, inputClass }) => {
+const EditField = ({ value, onTextChange, textClass, inputClass }) => {
 
   const [editing, setEditing] = React.useState(false);
   const [newText, setNewText] = React.useState(value);
@@ -32,4 +32,4 @@ const EditHeaderField = ({ value, onTextChange, textClass, inputClass }) => {
   
 }
 
-export default EditHeaderField;
+export default EditField;

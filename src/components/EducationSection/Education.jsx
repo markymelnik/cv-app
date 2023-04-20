@@ -1,6 +1,5 @@
 import React from 'react';
-import EditEducationField from './EditEducationField';
-
+import EditField from '../EditField';
 
 const Education = () => {
 
@@ -25,20 +24,20 @@ const Education = () => {
     <div className='resume-education'>
       <div className='education-header'>Education</div>
       <div className='education-school'>
-        <EditEducationField 
+        <EditField 
           value={schoolName}
           onTextChange={handleSchoolNameChange}
           textClass='education-info'
           inputClass='edit-education-info'
         />
-        <EditEducationField 
+        <EditField 
           value={schoolAttendRange}
           onTextChange={handleSchoolAttendRange}
           textClass='education-info'
           inputClass='edit-education-info'
         />
       </div>
-      <EditEducationField 
+      <EditField 
           value={degree}
           onTextChange={handleSetDegree}
           textClass='education-info'

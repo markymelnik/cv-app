@@ -3,9 +3,9 @@ import Education from './EducationSection/Education';
 import Experience from './ExperienceSection/Experience';
 import Skills from './SkillsSection/Skills';
 
-const Page = () => {
+const Document = () => {
   return (
-    <div className='page'>
+    <div className='document'>
       <Header/>
       <Education/>
       <Experience/>
@@ -14,4 +14,4 @@ const Page = () => {
   )
 }
 
-export default Page;
+export default Document;

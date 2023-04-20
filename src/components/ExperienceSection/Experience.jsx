@@ -1,14 +1,48 @@
+import React from 'react';
+import EditField from '../EditField';
 
 const Experience = () => {
+
+  const [companyName, setCompanyName] = React.useState('Facebook');
+  const [workDateRange, setWorkDateRange] = React.useState('20xx-20xx');
+  const [jobTitle, setJobTitle] = React.useState('Junior Software Developer');
+
+  const handleCompanyName = (newText) => {
+    setCompanyName(newText);
+  }
+
+  const handleWorkDateRange = (newText) => {
+    setWorkDateRange(newText);
+  }
+
+  const handleJobTitle = (newText) => {
+    setJobTitle(newText);
+  }
+
   return (
     <div className='resume-experience'>
       <div className='experience-header'>Experience</div>
       <div className='experience-block'>
         <div className='experience-info'>
-          <div className='experience-company'>Facebook</div>
-          <div className='experience-dates'>2021-2022</div>
+          <EditField 
+            value={companyName}
+            onTextChange={handleCompanyName}
+            textClass='education-info'
+            inputClass='edit-education-info'
+          />
+          <EditField 
+            value={workDateRange}
+            onTextChange={handleWorkDateRange}
+            textClass='education-info'
+            inputClass='edit-education-info'
+          />
         </div>
-        <div className='experience-title'>Software Engineer</div>
+        <EditField 
+            value={jobTitle}
+            onTextChange={handleJobTitle}
+            textClass='education-info'
+            inputClass='edit-education-info'
+          />
         <div className='experience-description'>
           <div className='experience-bullet'>*</div>
         </div>

@@ -1,8 +1,8 @@
-import Page from './components/Document';
+import Document from './components/Document';
 
 function App() {
   return (
-    <Page/>
+    <Document/>
   )
 }
 

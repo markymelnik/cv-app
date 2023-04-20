@@ -14,7 +14,7 @@
   height: 100vh;
 }
 
-.page {
+.document {
   display: flex;
   flex-direction: column;
   gap: 10px;
