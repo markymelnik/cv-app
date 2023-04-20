@@ -1,9 +1,12 @@
+import Page from './components/Page';
+
+
 function App() {
   return (
     <>
-      <div className='header'>CV App</div>
+      <Page/>
     </>
   )
 }
 
-export default App
+export default App;

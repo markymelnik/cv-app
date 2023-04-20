@@ -2,15 +2,101 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  border: 0;
+  border: 1px dotted red;
 }
 
 #root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100vh;
 }
 
-.header {
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 792px;
+  width: 612px;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.resume-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  height: 10%;
+  width: 100%;
+}
+
+.header-name {
+  font-size: 25px;
+}
+
+.header-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  width: 50%;
+}
+
+.resume-education {
+  display: flex;
+  flex-direction: column;
+  height: 15%;
+  width: 100%;
+}
+
+.education-header {
   font-size: 20px;
-  font-weight: bold;
+}
+
+.education-school {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; 
+}
+
+.resume-experience {
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+  width: 100%;
+}
+
+.experience-header {
+  font-size: 20px;
+}
+
+.experience-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.experience-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.resume-skills {
+  display: flex;
+  flex-direction: column;
+  height: 10%;
+  width: 100%;
+}
+
+.skills-header {
+  font-size: 20px;
+}
+
+.skills-container {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
 }
