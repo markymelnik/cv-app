@@ -37,6 +37,11 @@
   font-size: 25px;
 }
 
+.header-name:hover {
+  background: lightgrey;
+  cursor: pointer;
+}
+
 .header-info {
   display: flex;
   flex-direction: row;

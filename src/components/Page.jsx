@@ -1,4 +1,4 @@
-import Header from './Header';
+import Header from './HeaderSection/Header';
 import Education from './Education';
 import Experience from './Experience';
 import Skills from './Skills';
