@@ -1,8 +1,15 @@
+import React from 'react';
 import Document from './components/Document';
+import BulletPoint from './components/BulletPoint';
 
-function App() {
+
+const App = () => {
+
   return (
-    <Document/>
+    <>
+      <Document/>
+      <BulletPoint/>
+    </>
   )
 }
 

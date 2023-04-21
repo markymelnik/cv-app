@@ -16,7 +16,7 @@ const Skills = () => {
         <EditField 
           value={skill}
           onTextChange={handleSkill}
-          textClass='education-info'
+          textClass='skill-info'
           inputClass='edit-education-info'
         />
       </div>

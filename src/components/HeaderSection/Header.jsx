@@ -26,32 +26,34 @@ const Header = () => {
 
   return (
     <div className='resume-header'>
-      <EditField 
-        value={name} 
-        onTextChange={handleNameChange}
-        textClass='header-name'
-        inputClass='edit-header-name'
-      />
+      <div className='header-name'>
+        <EditField 
+          value={name} 
+          onTextChange={handleNameChange}
+          textClass='name center'
+          inputClass='edit-name center'
+        />
+      </div>
       <div className='header-info'>
         <EditField 
           value={email} 
           onTextChange={handleEmailChange}
           textClass='header-subinfo'
-          inputClass='edit-header-subinfo'
+          inputClass='edit-header-subinfo center'
         />
         <span>|</span>
         <EditField 
           value={phoneNumber} 
           onTextChange={handlePhoneNumberChange}
           textClass='header-subinfo'
-          inputClass='edit-header-subinfo'
+          inputClass='edit-header-subinfo center'
         />
         <span>|</span>
         <EditField 
           value={website} 
           onTextChange={handleWebsiteChange}
           textClass='header-subinfo'
-          inputClass='edit-header-subinfo'
+          inputClass='edit-header-subinfo center'
         />
       </div>
     </div>

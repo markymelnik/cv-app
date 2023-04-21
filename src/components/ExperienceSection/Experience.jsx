@@ -23,28 +23,30 @@ const Experience = () => {
     <div className='resume-experience'>
       <div className='experience-header'>Experience</div>
       <div className='experience-block'>
-        <div className='experience-info'>
+        <div className='experience-subheader bold'>
           <EditField 
             value={companyName}
             onTextChange={handleCompanyName}
-            textClass='education-info'
-            inputClass='edit-education-info'
+            textClass='experience-info'
+            inputClass='edit-experience-info left'
           />
           <EditField 
             value={workDateRange}
             onTextChange={handleWorkDateRange}
-            textClass='education-info'
-            inputClass='edit-education-info'
+            textClass='experience-info'
+            inputClass='edit-experience-info right'
           />
         </div>
-        <EditField 
+        <div className='experience-subheader italic'>
+          <EditField 
             value={jobTitle}
             onTextChange={handleJobTitle}
-            textClass='education-info'
-            inputClass='edit-education-info'
+            textClass='experience-info' 
+            inputClass='edit-experience-info left'
           />
+        </div>
         <div className='experience-description'>
-          <div className='experience-bullet'>*</div>
+          
         </div>
       </div>
     </div>
