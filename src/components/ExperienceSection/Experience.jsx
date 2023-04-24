@@ -6,6 +6,7 @@ const Experience = () => {
   const [companyName, setCompanyName] = React.useState('Facebook');
   const [workDateRange, setWorkDateRange] = React.useState('20xx-20xx');
   const [jobTitle, setJobTitle] = React.useState('Junior Software Developer');
+  const [bulletPoints, setBulletPoints] = React.useState([]);
 
   const handleCompanyName = (newText) => {
     setCompanyName(newText);
@@ -17,6 +18,16 @@ const Experience = () => {
 
   const handleJobTitle = (newText) => {
     setJobTitle(newText);
+  }
+
+  const handleAddBullet = (newBullet) => {
+    setBulletPoints([...bulletPoints, newBullet]);
+  }
+
+  const handleDeleteBullet = (index) => {
+    const newBullets = [...bulletPoints];
+    newBullets.splice(index, 1);
+    setBulletPoints(newBullets);
   }
 
   return (

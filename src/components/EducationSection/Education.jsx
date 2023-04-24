@@ -1,6 +1,5 @@
 import React from 'react';
 import EditField from '../EditField';
-import BulletPoint from '../BulletPoint';
 
 const Education = () => {
 
@@ -21,19 +20,29 @@ const Education = () => {
     setDegree(newText);
   }
 
-  const handleAddBullet = (newBullet) => {
-    setBullets([...bulletPoints, newBullet]);
+  const handleAddBulletPoint = () => {
+    setBulletPoints([...bulletPoints, { text: '->'+'Edit me!' }]);
   }
 
-  const handleDeleteBullet = (index) => {
-    const newBullets = [...bulletPoints];
-    newBullets.splice(index, 1);
-    setBulletPoints(newBullets);
+  const handleBulletTextChange = (newText, index) => {
+    const newBulletPoints = [...bulletPoints];
+    newBulletPoints[index] = { text: '->'+newText };
+    setBulletPoints(newBulletPoints);
+  }
+
+  const handleDeleteBulletPoint = (index) => {
+    const newBulletPoints = [...bulletPoints];
+    newBulletPoints.splice(index, 1);
+    setBulletPoints(newBulletPoints);
   }
 
   return (
     <div className='resume-education'>
-      <div className='education-header'>Education</div>
+      <div className='education-header'>Education
+        <span>
+          <button className='add-btn edu-btn' onClick={handleAddBulletPoint}>+</button>
+        </span>
+      </div>
       <div className='education-subheader bold'>
         <EditField 
           value={schoolName}
@@ -56,8 +65,22 @@ const Education = () => {
           inputClass='edit-education-info left'
         />
       </div>
-      <div className='education-description'></div>
-    </div> 
+      <div className='education-description'>
+        {bulletPoints.map((bulletPoint, index) => (
+          <div className='bullet-point' key={index}>
+            <div>
+              <EditField
+                value={bulletPoint.text}
+                onTextChange={(newText) => handleBulletTextChange(newText, index)}
+                textClass='bullet-text'
+                inputClass='edit-bullet-text left'
+              />
+            </div>
+            <button className='delete-bullet-btn' onClick={() => handleDeleteBulletPoint(index)}>x</button>
+          </div>
+        ))}
+      </div>
+    </div>
   )
 }
 
