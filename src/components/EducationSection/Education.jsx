@@ -1,5 +1,7 @@
 import React from 'react';
 import EditField from '../EditField';
+import AddBulletPointBtn from '../AddBulletPointButton';
+import BulletPoints from '../BulletPoints'
 
 const Education = () => {
 
@@ -21,27 +23,14 @@ const Education = () => {
   }
 
   const handleAddBulletPoint = () => {
-    setBulletPoints([...bulletPoints, { text: '->'+'Edit me!' }]);
-  }
-
-  const handleBulletTextChange = (newText, index) => {
-    const newBulletPoints = [...bulletPoints];
-    newBulletPoints[index] = { text: '->'+newText };
-    setBulletPoints(newBulletPoints);
-  }
-
-  const handleDeleteBulletPoint = (index) => {
-    const newBulletPoints = [...bulletPoints];
-    newBulletPoints.splice(index, 1);
-    setBulletPoints(newBulletPoints);
+    if (bulletPoints.length > 2) return;
+    setBulletPoints([...bulletPoints, { text: 'Edit education information' }]);
   }
 
   return (
     <div className='resume-education'>
       <div className='education-header'>Education
-        <span>
-          <button className='add-btn edu-btn' onClick={handleAddBulletPoint}>+</button>
-        </span>
+        <AddBulletPointBtn addBulletPoint={handleAddBulletPoint}/>
       </div>
       <div className='education-subheader bold'>
         <EditField 
@@ -66,21 +55,9 @@ const Education = () => {
         />
       </div>
       <div className='education-description'>
-        {bulletPoints.map((bulletPoint, index) => (
-          <div className='bullet-point' key={index}>
-            <div>
-              <EditField
-                value={bulletPoint.text}
-                onTextChange={(newText) => handleBulletTextChange(newText, index)}
-                textClass='bullet-text'
-                inputClass='edit-bullet-text left'
-              />
-            </div>
-            <button className='delete-bullet-btn' onClick={() => handleDeleteBulletPoint(index)}>x</button>
-          </div>
-        ))}
-      </div>
+        <BulletPoints bulletPoints={bulletPoints} setBulletPoints={setBulletPoints}/>
     </div>
+  </div>
   )
 }
 

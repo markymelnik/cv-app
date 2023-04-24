@@ -149,6 +149,15 @@
   font-size: 15px;
 }
 
+.bullet-point {
+  font-size: 15px;
+  margin-left: 10px;
+}
+
+.bullet-text:before {
+  content: '• ';
+}
+
 .bullet-text:hover {
   background: lightgrey;
   cursor: pointer;
