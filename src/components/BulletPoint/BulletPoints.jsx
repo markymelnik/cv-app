@@ -3,31 +3,31 @@ import EditField from '../EditField';
 
 const BulletPoints = ({ bulletPoints, setBulletPoints }) => {
 
-  const handleBulletTextChange = (newText, index) => {
+  const handleBulletTextChange = (newText, bulletIndex) => {
     const newBulletPoints = [...bulletPoints];
-    newBulletPoints[index] = { text: newText };
+    newBulletPoints[bulletIndex] = { text: newText };
     setBulletPoints(newBulletPoints);
   }
 
-  const handleDeleteBulletPoint = (index) => {
+  const handleDeleteBulletPoint = (bulletIndex) => {
     const newBulletPoints = [...bulletPoints];
-    newBulletPoints.splice(index, 1);
+    newBulletPoints.splice(bulletIndex, 1);
     setBulletPoints(newBulletPoints);
   }
 
   return (
     <>
-      {bulletPoints.map((bulletPoint, index) => (
-        <div className='bullet-point' key={index}>
+      {bulletPoints.map((bulletPoint, bulletIndex) => (
+        <div className='bullet-point' key={bulletIndex}>
           <div>
             <EditField
               value={bulletPoint.text}
-              onTextChange={(newText) => handleBulletTextChange(newText, index)}
+              onTextChange={(newText) => handleBulletTextChange(newText, bulletIndex)}
               textClass='bullet-text'
               inputClass='edit-bullet-text left'
             />
           </div>
-          <button className='delete-btn' onClick={() => handleDeleteBulletPoint(index)}>x</button>
+          <button className='delete-btn' onClick={() => handleDeleteBulletPoint(bulletIndex)}>x</button>
         </div>
       ))}
     </>

@@ -6,7 +6,7 @@ import BulletPoints from '../BulletPoint/BulletPoints'
 const EducationSection = () => {
 
   const [schoolName, setSchoolName] = React.useState('Something University');
-  const [schoolAttendRange, setSchoolAttendRange] = React.useState('20xx-20xx');
+  const [attendRange, setAttendRange] = React.useState('20XX-20XX');
   const [degree, setDegree] = React.useState('Bachelor of Science, CS');
   const [bulletPoints, setBulletPoints] = React.useState([]);
 
@@ -14,8 +14,8 @@ const EducationSection = () => {
     setSchoolName(newText);
   }
 
-  const handleSchoolAttendRange = (newText) => {
-    setSchoolAttendRange(newText);
+  const handleAttendRange = (newText) => {
+    setAttendRange(newText);
   }
 
   const handleSetDegree = (newText) => {
@@ -40,8 +40,8 @@ const EducationSection = () => {
           inputClass='edit-education-info left'
         />
         <EditField 
-          value={schoolAttendRange}
-          onTextChange={handleSchoolAttendRange}
+          value={attendRange}
+          onTextChange={handleAttendRange}
           textClass='education-info'
           inputClass='edit-education-info right'
         />
@@ -55,7 +55,10 @@ const EducationSection = () => {
         />
       </div>
       <div className='education-description'>
-        <BulletPoints bulletPoints={bulletPoints} setBulletPoints={setBulletPoints}/>
+        <BulletPoints 
+          bulletPoints={bulletPoints} 
+          setBulletPoints={setBulletPoints}
+        />
     </div>
   </div>
   )

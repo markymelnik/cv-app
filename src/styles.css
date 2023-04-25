@@ -25,16 +25,6 @@
   padding: 10px;
 }
 
-.btn-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  border: 1px solid black;
-  height: 792px;
-  width: 100px;
-}
-
 .add-btn {
   height: 30px;
   width: 30px;
@@ -46,6 +36,47 @@
   background-color: lightsteelblue;
   cursor: pointer;
 }
+
+.bullet-point {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 15px;
+}
+
+.bullet-point {
+  font-size: 15px;
+  margin-left: 10px;
+}
+
+.bullet-text:before {
+  content: '• ';
+}
+
+.bullet-text:hover {
+  background: lightgrey;
+  cursor: pointer;
+}
+
+.edit-bullet-text {
+  border: none;
+  text-align: left;
+  font-size: 15px;
+  background-color: lightgrey;
+}
+
+.delete-btn {
+  height: 20px;
+  width: 20px;
+  background-color: rgb(228, 105, 105);
+}
+
+.delete-btn:hover {
+  cursor: pointer;
+  background-color: rgb(218, 62, 62);
+}
+
+
 
 .resume-header {
   display: flex;
@@ -102,6 +133,7 @@
 }
 
 
+
 .resume-education {
   display: flex;
   flex-direction: column;
@@ -140,45 +172,6 @@
   display: flex;
   flex-direction: column;
   font-size: 15px;
-}
-
-.bullet-point {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  font-size: 15px;
-}
-
-.bullet-point {
-  font-size: 15px;
-  margin-left: 10px;
-}
-
-.bullet-text:before {
-  content: '• ';
-}
-
-.bullet-text:hover {
-  background: lightgrey;
-  cursor: pointer;
-}
-
-.edit-bullet-text {
-  border: none;
-  text-align: left;
-  font-size: 15px;
-  background-color: lightgrey;
-}
-
-.delete-btn {
-  height: 20px;
-  width: 20px;
-  background-color: rgb(228, 105, 105);
-}
-
-.delete-btn:hover {
-  cursor: pointer;
-  background-color: rgb(218, 62, 62);
 }
 
 
