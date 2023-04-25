@@ -1,6 +1,6 @@
 import React from 'react';
 import EditField from '../EditField';
-import AddBulletPointBtn from '../BulletPoint/AddBulletPointBtn';
+import Button from '../Button';
 import BulletPoints from '../BulletPoint/BulletPoints'
 
 const EducationSection = () => {
@@ -30,7 +30,7 @@ const EducationSection = () => {
   return (
     <div className='resume-education'>
       <div className='education-header'>Education
-        <AddBulletPointBtn addBulletPoint={handleAddBulletPoint}/>
+        <Button cssClass='add-btn' btnContent='+' onBtnClick={handleAddBulletPoint}/>
       </div>
       <div className='education-subheader bold'>
         <EditField 

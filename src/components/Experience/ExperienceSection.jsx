@@ -1,7 +1,6 @@
 import React from 'react';
 import EditField from '../EditField';
-import AddExperienceBtn from './AddExperienceButton';
-import AddBulletPointBtn from '../BulletPoint/AddBulletPointBtn';
+import Button from '../Button';
 import BulletPoints from '../BulletPoint/BulletPoints';
 
 const ExperienceSection = () => {
@@ -52,18 +51,20 @@ const ExperienceSection = () => {
   return (
     <div className='resume-experience'>
       <div className='experience-header'>Experience
-        <AddExperienceBtn addExperience={handleAddExperience} />
+        <Button cssClass='add-btn' btnContent='+' onBtnClick={handleAddExperience} />
       </div>
       {experienceBlocks.map((block, experienceIndex) => (
         <div className='experience-block' key={experienceIndex}>
-          <button className='delete-btn' onClick={() => handleDeleteExperience(experienceIndex)}>X</button>
           <div className='experience-subheader bold'>
+          <div className='experience-wrapper'>
             <EditField 
               value={block.companyName}
               onTextChange={(newText) => handleExperienceUpdate(experienceIndex, 'companyName', newText, block.bulletPoints)}
               textClass='experience-info'
               inputClass='edit-experience-info left'
             />
+            <Button cssClass='delete-btn' btnContent='x' onBtnClick={() => handleDeleteExperience(experienceIndex)} />
+          </div>
             <EditField 
               value={block.workDateRange}
               onTextChange={(newText) => handleExperienceUpdate(experienceIndex, 'workDateRange', newText, block.bulletPoints)}
@@ -78,8 +79,10 @@ const ExperienceSection = () => {
               textClass='experience-info' 
               inputClass='edit-experience-info left'
             />
-            <AddBulletPointBtn
-              addBulletPoint={() => handleAddBulletPoint(experienceIndex, block.bulletPoints)}
+            <Button
+              cssClass='add-btn'
+              btnContent='+'
+              onBtnClick={() => handleAddBulletPoint(experienceIndex, block.bulletPoints)}
             />
           </div>
           <div className='experience-description'>

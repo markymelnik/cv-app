@@ -23,13 +23,17 @@ const EditField = ({ value, onTextChange, textClass, inputClass }) => {
   return (
     <>
       {editing ? (
-        <input type='text' value={newText} onChange={handleChange} onKeyDown={handleSave} className={inputClass}/>
+        <input 
+          type='text' 
+          value={newText} 
+          onChange={handleChange} 
+          onKeyDown={handleSave} 
+          className={inputClass}/>
       ) : (
         <div onClick={handleEdit} className={textClass}>{value}</div>
       )}
     </>
   )
-  
 }
 
 export default EditField;
