@@ -1,7 +1,7 @@
 import React from 'react';
 import EditField from '../EditField';
 
-const Skills = () => {
+const SkillsSection = () => {
 
   const [skill, setSkill] = React.useState('JavaScript');
 
@@ -24,4 +24,4 @@ const Skills = () => {
   )
 }
 
-export default Skills;
+export default SkillsSection;

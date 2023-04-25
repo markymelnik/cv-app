@@ -1,9 +1,9 @@
 import React from 'react';
 import EditField from '../EditField';
-import AddBulletPointBtn from '../AddBulletPointButton';
+import AddBulletPointBtn from '../AddBulletPointBtn';
 import BulletPoints from '../BulletPoints'
 
-const Education = () => {
+const EducationSection = () => {
 
   const [schoolName, setSchoolName] = React.useState('Something University');
   const [schoolAttendRange, setSchoolAttendRange] = React.useState('20xx-20xx');
@@ -61,4 +61,4 @@ const Education = () => {
   )
 }
 
-export default Education;
+export default EducationSection;

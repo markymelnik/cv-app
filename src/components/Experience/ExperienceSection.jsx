@@ -1,12 +1,12 @@
 import React from 'react';
 import EditField from '../EditField';
+import AddExperienceButton from './AddExperienceButton';
 
-const Experience = () => {
+const ExperienceSection = () => {
 
   const [companyName, setCompanyName] = React.useState('Facebook');
   const [workDateRange, setWorkDateRange] = React.useState('20xx-20xx');
   const [jobTitle, setJobTitle] = React.useState('Junior Software Developer');
-  const [bulletPoints, setBulletPoints] = React.useState([]);
 
   const handleCompanyName = (newText) => {
     setCompanyName(newText);
@@ -20,19 +20,11 @@ const Experience = () => {
     setJobTitle(newText);
   }
 
-  const handleAddBullet = (newBullet) => {
-    setBulletPoints([...bulletPoints, newBullet]);
-  }
-
-  const handleDeleteBullet = (index) => {
-    const newBullets = [...bulletPoints];
-    newBullets.splice(index, 1);
-    setBulletPoints(newBullets);
-  }
-
   return (
     <div className='resume-experience'>
-      <div className='experience-header'>Experience</div>
+      <div className='experience-header'>Experience
+        <AddExperienceButton/>
+      </div>
       <div className='experience-block'>
         <div className='experience-subheader bold'>
           <EditField 
@@ -64,4 +56,4 @@ const Experience = () => {
   )
 }
 
-export default Experience;
+export default ExperienceSection;

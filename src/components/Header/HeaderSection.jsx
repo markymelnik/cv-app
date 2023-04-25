@@ -1,7 +1,7 @@
 import React from 'react';
 import EditField from '../EditField';
 
-const Header = () => {
+const HeaderSection = () => {
 
   const [name, setName] = React.useState('Mark');
   const [email, setEmail] = React.useState('Email');
@@ -60,4 +60,4 @@ const Header = () => {
   )
 }
 
-export default Header;
+export default HeaderSection;

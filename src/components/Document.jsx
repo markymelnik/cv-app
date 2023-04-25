@@ -1,15 +1,15 @@
-import Header from './HeaderSection/Header';
-import Education from './EducationSection/Education';
-import Experience from './ExperienceSection/Experience';
-import Skills from './SkillsSection/Skills';
+import HeaderSection from './Header/HeaderSection';
+import EducationSection from './Education/EducationSection';
+import ExperienceSection from './Experience/ExperienceSection';
+import SkillsSection from './Skills/SkillsSection';
 
 const Document = () => {
   return (
     <div className='document'>
-      <Header/>
-      <Education/>
-      <Experience/>
-      <Skills/>
+      <HeaderSection/>
+      <EducationSection/>
+      <ExperienceSection/>
+      <SkillsSection/>
     </div>
   )
 }
