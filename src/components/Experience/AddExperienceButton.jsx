@@ -1,4 +1,4 @@
-const AddExperienceButton = ({ addExperience }) => {
+const AddExperienceBtn = ({ addExperience }) => {
 
   return (
     <span>
@@ -7,4 +7,4 @@ const AddExperienceButton = ({ addExperience }) => {
   )
 }
 
-export default AddExperienceButton;
+export default AddExperienceBtn;

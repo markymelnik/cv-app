@@ -1,57 +1,59 @@
 import React from 'react';
 import EditField from '../EditField';
-import AddExperienceButton from './AddExperienceButton';
+import AddExperienceBtn from './AddExperienceButton';
 
 const ExperienceSection = () => {
 
-  const [companyName, setCompanyName] = React.useState('Facebook');
-  const [workDateRange, setWorkDateRange] = React.useState('20xx-20xx');
-  const [jobTitle, setJobTitle] = React.useState('Junior Software Developer');
+  const [experienceBlocks, setExperienceBlocks] = React.useState([]);
 
-  const handleCompanyName = (newText) => {
-    setCompanyName(newText);
+  const addExperience = () => {
+    setExperienceBlocks([...experienceBlocks, { 
+      companyName: 'Apple', 
+      workDateRange: '20XX-20XX', 
+      jobTitle: 'Software Developer'
+    }]);
   }
 
-  const handleWorkDateRange = (newText) => {
-    setWorkDateRange(newText);
-  }
-
-  const handleJobTitle = (newText) => {
-    setJobTitle(newText);
+  const handleExperienceUpdate = (index, property, newText) => {
+    setExperienceBlocks(experienceBlocks.map((block, i) => {
+      if (i !== index) return block;
+      return { ...block, [property]: newText };
+    }));
   }
 
   return (
     <div className='resume-experience'>
       <div className='experience-header'>Experience
-        <AddExperienceButton/>
+        <AddExperienceBtn addExperience={addExperience} />
       </div>
-      <div className='experience-block'>
-        <div className='experience-subheader bold'>
-          <EditField 
-            value={companyName}
-            onTextChange={handleCompanyName}
-            textClass='experience-info'
-            inputClass='edit-experience-info left'
-          />
-          <EditField 
-            value={workDateRange}
-            onTextChange={handleWorkDateRange}
-            textClass='experience-info'
-            inputClass='edit-experience-info right'
-          />
+      {experienceBlocks.map((block, index) => (
+        <div className='experience-block' key={index}>
+          <div className='experience-subheader bold'>
+            <EditField 
+              value={block.companyName}
+              onTextChange={(newText) => handleExperienceUpdate(index, 'companyName', newText)}
+              textClass='experience-info'
+              inputClass='edit-experience-info left'
+            />
+            <EditField 
+              value={block.workDateRange}
+              onTextChange={(newText) => handleExperienceUpdate(index, 'workDateRange', newText)}
+              textClass='experience-info'
+              inputClass='edit-experience-info right'
+            />
+          </div>
+          <div className='experience-subheader italic'>
+            <EditField 
+              value={block.jobTitle}
+              onTextChange={(newText) => handleExperienceUpdate(index, 'jobTitle', newText)}
+              textClass='experience-info' 
+              inputClass='edit-experience-info left'
+            />
+          </div>
+          <div className='experience-description'>
+          </div>
         </div>
-        <div className='experience-subheader italic'>
-          <EditField 
-            value={jobTitle}
-            onTextChange={handleJobTitle}
-            textClass='experience-info' 
-            inputClass='edit-experience-info left'
-          />
-        </div>
-        <div className='experience-description'>
-          
-        </div>
-      </div>
+      ))}
     </div>
   )
 }
