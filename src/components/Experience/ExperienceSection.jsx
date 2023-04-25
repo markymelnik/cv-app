@@ -6,7 +6,7 @@ const ExperienceSection = () => {
 
   const [experienceBlocks, setExperienceBlocks] = React.useState([]);
 
-  const addExperience = () => {
+  const handleAddExperience = () => {
     setExperienceBlocks([...experienceBlocks, { 
       companyName: 'Apple', 
       workDateRange: '20XX-20XX', 
@@ -21,13 +21,18 @@ const ExperienceSection = () => {
     }));
   }
 
+  const handleDeleteExperience = (index) => {
+    setExperienceBlocks(experienceBlocks.filter((block, i) => i !== index));
+  };
+
   return (
     <div className='resume-experience'>
       <div className='experience-header'>Experience
-        <AddExperienceBtn addExperience={addExperience} />
+        <AddExperienceBtn addExperience={handleAddExperience} />
       </div>
       {experienceBlocks.map((block, index) => (
         <div className='experience-block' key={index}>
+          <button className='delete-btn' onClick={() => handleDeleteExperience(index)}>X</button>
           <div className='experience-subheader bold'>
             <EditField 
               value={block.companyName}

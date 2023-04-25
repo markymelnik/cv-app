@@ -1,5 +1,5 @@
 import React from 'react';
-import EditField from './EditField';
+import EditField from '../EditField';
 
 const BulletPoints = ({ bulletPoints, setBulletPoints }) => {
 
@@ -27,7 +27,7 @@ const BulletPoints = ({ bulletPoints, setBulletPoints }) => {
               inputClass='edit-bullet-text left'
             />
           </div>
-          <button className='delete-bullet-btn' onClick={() => handleDeleteBulletPoint(index)}>x</button>
+          <button className='delete-btn' onClick={() => handleDeleteBulletPoint(index)}>x</button>
         </div>
       ))}
     </>

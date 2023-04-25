@@ -1,7 +1,7 @@
 import React from 'react';
 import EditField from '../EditField';
-import AddBulletPointBtn from '../AddBulletPointBtn';
-import BulletPoints from '../BulletPoints'
+import AddBulletPointBtn from '../BulletPoint/AddBulletPointBtn';
+import BulletPoints from '../BulletPoint/BulletPoints'
 
 const EducationSection = () => {
 
