@@ -3,55 +3,49 @@ import EditField from '../EditField';
 
 const HeaderSection = () => {
 
-  const [name, setName] = React.useState('Mark');
-  const [email, setEmail] = React.useState('Email');
-  const [phoneNumber, setPhoneNumber] = React.useState('###-###-####');
-  const [website, setWebsite] = React.useState('Website');
+  const [headerInfo, setHeaderInfo] = React.useState([{
+    name: 'Name',
+    email: 'Email',
+    phoneNumber: '(###)-###-####',
+    website: 'URL'
+  }]);
 
-  const handleNameChange = (newText) => {
-    setName(newText);
-  }
-
-  const handleEmailChange = (newText) => {
-    setEmail(newText);
-  }
-
-  const handlePhoneNumberChange = (newText) => {
-    setPhoneNumber(newText);
-  }
-
-  const handleWebsiteChange = (newText) => {
-    setWebsite(newText);
+  const handleHeaderUpdate = (property, newText) => {
+    setHeaderInfo(headerInfo => {
+      const updatedHeaderInfo = [...headerInfo];
+      updatedHeaderInfo[0][property] = newText;
+      return updatedHeaderInfo;
+    })
   }
 
   return (
     <div className='resume-header'>
       <div className='header-name'>
         <EditField 
-          value={name} 
-          onTextChange={handleNameChange}
+          value={headerInfo[0].name} 
+          onTextChange={(newText) => handleHeaderUpdate('name', newText)}
           textClass='name center'
           inputClass='edit-name center'
         />
       </div>
       <div className='header-info'>
         <EditField 
-          value={email} 
-          onTextChange={handleEmailChange}
+          value={headerInfo[0].email} 
+          onTextChange={(newText) => handleHeaderUpdate('email', newText)}
           textClass='header-subinfo'
           inputClass='edit-header-subinfo center'
         />
         <span>|</span>
         <EditField 
-          value={phoneNumber} 
-          onTextChange={handlePhoneNumberChange}
+          value={headerInfo[0].phoneNumber} 
+          onTextChange={(newText) => handleHeaderUpdate('phoneNumber', newText)}
           textClass='header-subinfo'
           inputClass='edit-header-subinfo center'
         />
         <span>|</span>
         <EditField 
-          value={website} 
-          onTextChange={handleWebsiteChange}
+          value={headerInfo[0].website} 
+          onTextChange={(newText) => handleHeaderUpdate('website', newText)}
           textClass='header-subinfo'
           inputClass='edit-header-subinfo center'
         />

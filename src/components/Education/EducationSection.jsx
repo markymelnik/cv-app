@@ -5,21 +5,20 @@ import BulletPoints from '../BulletPoint/BulletPoints'
 
 const EducationSection = () => {
 
-  const [schoolName, setSchoolName] = React.useState('Something University');
-  const [attendRange, setAttendRange] = React.useState('20XX-20XX');
-  const [degree, setDegree] = React.useState('Bachelor of Science, CS');
+  const [educationInfo, setEducationInfo] = React.useState([{
+    schoolName: 'Something University',
+    attendRange: '20XX-20XX',
+    degree: 'Bachelor of Science, Neuroscience'
+  }])
+
   const [bulletPoints, setBulletPoints] = React.useState([]);
 
-  const handleSchoolNameChange = (newText) => {
-    setSchoolName(newText);
-  }
-
-  const handleAttendRange = (newText) => {
-    setAttendRange(newText);
-  }
-
-  const handleSetDegree = (newText) => {
-    setDegree(newText);
+  const handleEducationUpdate = (property, newText) => {
+    setEducationInfo(educationInfo => {
+      const updatedEducationInfo = [...educationInfo];
+      updatedEducationInfo[0][property] = newText;
+      return updatedEducationInfo;
+    })
   }
 
   const handleAddBulletPoint = () => {
@@ -34,22 +33,22 @@ const EducationSection = () => {
       </div>
       <div className='education-subheader bold'>
         <EditField 
-          value={schoolName}
-          onTextChange={handleSchoolNameChange}
+          value={educationInfo[0].schoolName}
+          onTextChange={(newText) => handleEducationUpdate('schoolName', newText)}
           textClass='education-info'
           inputClass='edit-education-info left'
         />
         <EditField 
-          value={attendRange}
-          onTextChange={handleAttendRange}
+          value={educationInfo[0].attendRange}
+          onTextChange={(newText) => handleEducationUpdate('attendRange', newText)}
           textClass='education-info'
           inputClass='edit-education-info right'
         />
       </div>
       <div className='education-subheader italic'>
         <EditField 
-          value={degree}
-          onTextChange={handleSetDegree}
+          value={educationInfo[0].degree}
+          onTextChange={(newText) => handleEducationUpdate('degree', newText)}
           textClass='education-info'
           inputClass='edit-education-info left'
         />
@@ -59,8 +58,8 @@ const EducationSection = () => {
           bulletPoints={bulletPoints} 
           setBulletPoints={setBulletPoints}
         />
+      </div>
     </div>
-  </div>
   )
 }
 
