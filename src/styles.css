@@ -18,7 +18,7 @@
 .document {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
   height: 792px;
   width: 612px;
   border: 1px solid black;
@@ -31,7 +31,7 @@
   display: flex;
   flex-direction: column;
   gap: 2px;
-  height: 8%;
+  height: 6%;
   width: 100%;
 }
 
@@ -43,7 +43,7 @@
 }
 
 .name {
-  font-size: 25px;
+  font-size: 24px;
 }
 
 .name:hover {
@@ -53,7 +53,7 @@
 
 .edit-name {
   border: none;
-  font-size: 25px;
+  font-size: 24px;
   background-color: lightgrey;
 }
 
@@ -93,6 +93,7 @@
 .education-header {
   display: flex;
   flex-direction: row;
+  align-items: center;
   font-size: 20px;
   border-bottom: 1px solid black;
 }
@@ -137,6 +138,7 @@
 .experience-header {
   display: flex;
   flex-direction: row;
+  align-items: center;
   font-size: 20px;
   border-bottom: 1px solid black;
 }
@@ -150,7 +152,7 @@
 .experience-wrapper {
   display: flex;
   flex-direction: row;
-  gap: 10px;
+  gap: 4px;
 }
 
 .experience-block {
@@ -162,6 +164,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  font-size: 15px;
 }
 
 .experience-info:hover {
@@ -186,6 +189,9 @@
 }
 
 .skills-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   font-size: 20px;
   border-bottom: 1px solid black;
 }
@@ -193,19 +199,30 @@
 .skills-container {
   display: flex;
   flex-direction: row;
-  gap: 5px;
+  flex-wrap: wrap;
 }
 
-.skill-info {
+.skill-block {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.skills-container > *:not(:first-child)::before {
+  content: '\00a0•\00a0';
+}
+
+.skill-text {
   font-size: 15px;
+  padding: 2px;
 }
 
-.skill-info:hover {
+.skill-text:hover {
   background: lightgrey;
   cursor: pointer;
 }
 
-.edit-skill-info {
+.edit-skill-text {
   border: none;
   text-align: left;
   font-size: 15px;
@@ -218,11 +235,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
   height: 20px;
   width: 20px;
-  font-size: 20px;
-  margin-left: 8px;
+  font-size: 18px;
+  margin-left: 4px;
   background-color: rgb(164, 226, 235);
   border-radius: 50px;
 }
@@ -235,11 +251,10 @@
 .delete-btn {
   display: flex;
   justify-content: center;
-  align-items: center;
-  text-align: center;
   height: 20px;
   width: 20px;
-  font-size: 20px;
+  font-size: 18px;
+  margin-left: 4px;
   background-color: rgb(238, 141, 141);
   border-radius: 50px;
 }
@@ -255,6 +270,10 @@
   justify-content: space-between;
   font-size: 15px;
   margin-left: 10px;
+}
+
+.bullet-text {
+  font-size: 15px;
 }
 
 .bullet-text:before {
@@ -293,4 +312,14 @@
 
 .right {
   text-align: right;
+}
+
+
+
+.resume-skills .skill-block .delete-btn {
+  display: none;
+}
+
+.resume-skills .skill-block:hover .delete-btn {
+  display: inline-block;
 }

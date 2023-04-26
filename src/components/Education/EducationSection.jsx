@@ -28,15 +28,13 @@ const EducationSection = () => {
 
   return (
     <div className='resume-education'>
-      <div className='education-header'>Education
-        <Button cssClass='add-btn' btnContent='+' onBtnClick={handleAddBulletPoint}/>
-      </div>
-      <div className='education-subheader bold'>
+      <div className='education-header'>Education</div>
+      <div className='education-subheader'>
         <EditField 
           value={educationInfo[0].schoolName}
           onTextChange={(newText) => handleEducationUpdate('schoolName', newText)}
-          textClass='education-info'
-          inputClass='edit-education-info left'
+          textClass='education-info bold'
+          inputClass='edit-education-info bold left'
         />
         <EditField 
           value={educationInfo[0].attendRange}
@@ -45,13 +43,14 @@ const EducationSection = () => {
           inputClass='edit-education-info right'
         />
       </div>
-      <div className='education-subheader italic'>
+      <div className='education-subheader'>
         <EditField 
           value={educationInfo[0].degree}
           onTextChange={(newText) => handleEducationUpdate('degree', newText)}
-          textClass='education-info'
-          inputClass='edit-education-info left'
+          textClass='education-info italic'
+          inputClass='edit-education-info italic left'
         />
+        <Button cssClass='add-btn' btnContent='+' onBtnClick={handleAddBulletPoint}/>
       </div>
       <div className='education-description'>
         <BulletPoints 

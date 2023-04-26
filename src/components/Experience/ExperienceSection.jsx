@@ -55,15 +55,15 @@ const ExperienceSection = () => {
       </div>
       {experienceBlocks.map((block, experienceIndex) => (
         <div className='experience-block' key={experienceIndex}>
-          <div className='experience-subheader bold'>
+          <div className='experience-subheader'>
           <div className='experience-wrapper'>
             <EditField 
               value={block.companyName}
               onTextChange={(newText) => handleExperienceUpdate(experienceIndex, 'companyName', newText, block.bulletPoints)}
-              textClass='experience-info'
-              inputClass='edit-experience-info left'
+              textClass='experience-info bold'
+              inputClass='edit-experience-info bold left'
             />
-            <Button cssClass='delete-btn' btnContent='x' onBtnClick={() => handleDeleteExperience(experienceIndex)} />
+            <Button cssClass='delete-btn' btnContent='×' onBtnClick={() => handleDeleteExperience(experienceIndex)} />
           </div>
             <EditField 
               value={block.workDateRange}
@@ -72,12 +72,12 @@ const ExperienceSection = () => {
               inputClass='edit-experience-info right'
             />
           </div>
-          <div className='experience-subheader italic'>
+          <div className='experience-subheader'>
             <EditField 
               value={block.jobTitle}
               onTextChange={(newText) => handleExperienceUpdate(experienceIndex, 'jobTitle', newText, block.bulletPoints)}
-              textClass='experience-info' 
-              inputClass='edit-experience-info left'
+              textClass='experience-info italic' 
+              inputClass='edit-experience-info italic left'
             />
             <Button
               cssClass='add-btn'

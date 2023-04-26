@@ -27,7 +27,7 @@ const BulletPoints = ({ bulletPoints, setBulletPoints }) => {
               inputClass='edit-bullet-text left'
             />
           </div>
-          <Button cssClass='delete-btn' btnContent='x' onBtnClick={() => handleDeleteBulletPoint(bulletIndex)} />
+          <Button cssClass='delete-btn' btnContent='×' onBtnClick={() => handleDeleteBulletPoint(bulletIndex)} />
         </div>
       ))}
     </>
