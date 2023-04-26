@@ -30,15 +30,17 @@ const SkillsSection = () => {
       </div>
       <div className='skills-container'>
         {skills.map((skill, skillIndex) =>
-          <div className={`skill-block ${hoveredSkill === skillIndex ? 'hovered' : ''}`} key={skillIndex} >
-            <EditField 
-              value={skill.text}
-              onMouseEnter={() => setHoveredSkill(skillIndex)}
-              onMouseLeave={() => setHoveredSkill(-1)}
-              onTextChange={(newText) => handleSkillUpdate(skillIndex, newText)}
-              textClass='skill-text'
-              inputClass='edit-skill-text'
-            />
+          <div className='skill-block' key={skillIndex} >
+            <div className={`skill-text ${hoveredSkill === skillIndex ? 'hovered' : ''}`}>
+              <EditField 
+                value={skill.text}
+                onMouseEnter={() => setHoveredSkill(skillIndex)}
+                onMouseLeave={() => setHoveredSkill(-1)}
+                onTextChange={(newText) => handleSkillUpdate(skillIndex, newText)}
+                textClass='skill-text'
+                inputClass='edit-skill-text'
+              />
+            </div>
             <Button cssClass='delete-btn' btnContent='×' onBtnClick={() => handleDeleteSkill(skillIndex)} />
           </div>
         )}

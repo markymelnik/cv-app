@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-family: 'Times New Roman', Times, serif;
   margin: 0;
   padding: 0;
   border: 0;
@@ -23,6 +24,76 @@
   width: 612px;
   border: 1px solid black;
   padding: 10px;
+}
+
+
+
+.add-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  width: 20px;
+  border: none;
+  font-size: 25px;
+  font-weight: bolder;
+  color: dodgerblue;
+  background-color: white;
+  transition: background-color 0.12s ease;
+}
+
+.add-btn:hover {
+  background-color: rgb(198, 227, 255);
+  cursor: pointer;
+}
+
+.delete-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  width: 20px;
+  border: none;
+  font-size: 25px;
+  font-weight: bolder;
+  color: red;
+  background-color: white;
+  transition: background-color 0.12s ease;
+}
+
+.delete-btn:hover {
+  cursor: pointer;
+  background-color: rgb(255, 189, 189);
+}
+
+.bullet-point {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 15px;
+  margin-left: 10px;
+}
+
+.bullet-text {
+  font-size: 15px;
+  transition: background-color 0.12s ease;
+}
+
+.bullet-text:before {
+  content: '• ';
+}
+
+.bullet-text:hover {
+  background-color: lightgrey;
+  cursor: pointer;
+}
+
+.edit-bullet-text {
+  border: none;
+  text-align: left;
+  font-size: 15px;
+  background-color: lightgrey;
+  
 }
 
 
@@ -68,10 +139,11 @@
 
 .header-subinfo {
   font-size: 15px;
+  transition: background-color 0.12s ease;
 }
 
 .header-subinfo:hover {
-  background: lightgrey;
+  background-color: lightgrey;
   cursor: pointer;
 }
 
@@ -106,10 +178,11 @@
 
 .education-info {
   font-size: 15px;
+  transition: background-color 0.12s ease;
 }
 
 .education-info:hover {
-  background: lightgrey;
+  background-color: lightgrey;
   cursor: pointer;
 }
 
@@ -164,7 +237,9 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   font-size: 15px;
+  transition: background-color 0.12s ease;
 }
 
 .experience-info:hover {
@@ -192,20 +267,25 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  gap: 4px;
   font-size: 20px;
   border-bottom: 1px solid black;
 }
 
 .skills-container {
   display: flex;
+  align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
+  padding: 4px;
 }
 
 .skill-block {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
+  height: 20px;
 }
 
 .skills-container > *:not(:first-child)::before {
@@ -213,81 +293,20 @@
 }
 
 .skill-text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   font-size: 15px;
-  padding: 2px;
+  transition: background-color 0.12s ease;
 }
 
 .skill-text:hover {
-  background: lightgrey;
+  background-color: lightgrey;
   cursor: pointer;
 }
 
 .edit-skill-text {
   border: none;
-  text-align: left;
-  font-size: 15px;
-  background-color: lightgrey;
-}
-
-
-
-.add-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 20px;
-  width: 20px;
-  font-size: 18px;
-  margin-left: 4px;
-  background-color: rgb(164, 226, 235);
-  border-radius: 50px;
-}
-
-.add-btn:hover {
-  background-color: rgb(128, 201, 212);
-  cursor: pointer;
-}
-
-.delete-btn {
-  display: flex;
-  justify-content: center;
-  height: 20px;
-  width: 20px;
-  font-size: 18px;
-  margin-left: 4px;
-  background-color: rgb(238, 141, 141);
-  border-radius: 50px;
-}
-
-.delete-btn:hover {
-  cursor: pointer;
-  background-color: rgb(231, 113, 113);
-}
-
-.bullet-point {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  font-size: 15px;
-  margin-left: 10px;
-}
-
-.bullet-text {
-  font-size: 15px;
-}
-
-.bullet-text:before {
-  content: '• ';
-}
-
-.bullet-text:hover {
-  background: lightgrey;
-  cursor: pointer;
-}
-
-.edit-bullet-text {
-  border: none;
-  text-align: left;
   font-size: 15px;
   background-color: lightgrey;
 }
@@ -321,5 +340,5 @@
 }
 
 .resume-skills .skill-block:hover .delete-btn {
-  display: inline-block;
+  display: flex;
 }
