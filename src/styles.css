@@ -32,7 +32,7 @@
   border: 1px solid black;
   background-color: rgb(232, 210, 250);
   height: 60px;
-  width: 100px;
+  width: 140px;
 }
 
 .toggle-btns-btn:hover {
@@ -40,66 +40,87 @@
   cursor: pointer;
 }
 
+.download-pdf-btn {
+  border: 1px solid black;
+  background-color: rgb(232, 210, 250);
+  height: 60px;
+  width: 140px;
+}
+
+.download-pdf-btn:hover {
+  background-color: rgb(203, 171, 230);
+  cursor: pointer;
+}
+
+
+
+
 .resume-document {
   display: flex;
   flex-direction: column;
   gap: 8px;
   height: 792px;
-  width: 612px;
+  min-width: 612px;
   border: 1px solid black;
   padding: 10px;
 }
-
-
 
 .add-btn {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 20px;
-  width: 20px;
+  height: 15px;
+  width: 15px;
   border: none;
   font-size: 25px;
   font-weight: bolder;
   color: dodgerblue;
   background-color: white;
-  transition: background-color 0.12s ease;
+  transition: font-size 0.08s ease;
 }
 
 .add-btn:hover {
-  background-color: rgb(198, 227, 255);
+  font-size: 30px;
   cursor: pointer;
+}
+
+.add-btn:active {
+  font-size: 25px;
 }
 
 .delete-btn {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 20px;
-  width: 20px;
+  height: 15px;
+  width: 15px;
   border: none;
   font-size: 25px;
   font-weight: bolder;
   color: red;
   background-color: white;
-  transition: background-color 0.12s ease;
+  transition: font-size 0.08s ease;
 }
 
 .delete-btn:hover {
+  font-size: 30px;
   cursor: pointer;
-  background-color: rgb(255, 189, 189);
+}
+
+.delete-btn:active {
+  font-size: 25px;
 }
 
 .bullet-point {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  font-size: 15px;
+  align-items: flex-start;
   margin-left: 10px;
 }
 
 .bullet-text {
-  font-size: 15px;
+  font-size: 12px;
   transition: background-color 0.12s ease;
 }
 
@@ -115,9 +136,8 @@
 .edit-bullet-text {
   border: none;
   text-align: left;
-  font-size: 15px;
+  font-size: 12px;
   background-color: lightgrey;
-  
 }
 
 
@@ -126,7 +146,7 @@
   display: flex;
   flex-direction: column;
   gap: 2px;
-  height: 6%;
+  min-height: 6%;
   width: 100%;
 }
 
@@ -138,7 +158,7 @@
 }
 
 .header-name {
-  font-size:20px;
+  font-size: 18px;
 }
 
 .header-name:hover {
@@ -148,7 +168,7 @@
 
 .edit-header-name {
   border: none;
-  font-size: 20px;
+  font-size: 18px;
   background-color: lightgrey;
 }
 
@@ -163,7 +183,7 @@
 }
 
 .header-subinfo {
-  font-size: 15px;
+  font-size: 14px;
   transition: background-color 0.12s ease;
 }
 
@@ -174,7 +194,7 @@
 
 .edit-header-subinfo {
   border: none;
-  font-size: 15px;
+  font-size: 14px;
   background-color: lightgrey;
 }
 
@@ -183,7 +203,7 @@
 .resume-education {
   display: flex;
   flex-direction: column;
-  min-height: 15%;
+  min-height: 12%;
   width: 100%;
 }
 
@@ -191,7 +211,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  font-size: 20px;
+  font-size: 16px;
   border-bottom: 1px solid black;
 }
 
@@ -202,7 +222,7 @@
 }
 
 .education-info {
-  font-size: 15px;
+  font-size: 14px;
   transition: background-color 0.12s ease;
 }
 
@@ -214,14 +234,13 @@
 .edit-education-info {
   border: none;
   text-align: left;
-  font-size: 15px;
+  font-size: 14px;
   background-color: lightgrey;
 }
 
 .education-description {
   display: flex;
   flex-direction: column;
-  font-size: 15px;
 }
 
 
@@ -237,7 +256,8 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  font-size: 20px;
+  gap: 6px;
+  font-size: 16px;
   border-bottom: 1px solid black;
 }
 
@@ -250,6 +270,7 @@
 .experience-wrapper {
   display: flex;
   flex-direction: row;
+  align-items: center;
   gap: 4px;
 }
 
@@ -263,7 +284,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  font-size: 15px;
+  font-size: 14px;
   transition: background-color 0.12s ease;
 }
 
@@ -292,8 +313,8 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 4px;
-  font-size: 20px;
+  gap: 6px;
+  font-size: 16px;
   border-bottom: 1px solid black;
 }
 
@@ -321,7 +342,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  font-size: 15px;
+  font-size: 14px;
   transition: background-color 0.12s ease;
 }
 

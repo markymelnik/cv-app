@@ -1,23 +1,13 @@
-import React, { useState } from "react";
 import HeaderSection from "./Header/HeaderSection";
 import EducationSection from "./Education/EducationSection";
 import ExperienceSection from "./Experience/ExperienceSection";
 import SkillsSection from "./Skills/SkillsSection";
-import Controller from "./Controller";
 
-const Document = () => {
-  const [toggleButtons, setToggleButtons] = useState(true);
-
-  const handleToggleButtons = () => {
-    setToggleButtons(!toggleButtons);
-  };
-
+const Resume = ({ toggleButtons, resumeRef }) => {
+  
   return (
     <>
-      <div className="tool-document">
-        <Controller onToggleButtons={handleToggleButtons} />
-      </div>
-      <div className="resume-document">
+      <div className="resume-document" ref={resumeRef}>
         <HeaderSection />
         <EducationSection toggleButtons={toggleButtons} />
         <ExperienceSection toggleButtons={toggleButtons} />
@@ -27,4 +17,4 @@ const Document = () => {
   );
 };
 
-export default Document;
+export default Resume;

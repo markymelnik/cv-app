@@ -45,7 +45,7 @@ const ExperienceSection = ({ toggleButtons }) => {
     const experienceBlock = newExperienceBlocks[experienceIndex];
     experienceBlock.bulletPoints = [
       ...experienceBlock.bulletPoints,
-      { text: "Edit bullet point" },
+      { text: "Edit experience information" },
     ];
     setExperienceBlocks(newExperienceBlocks);
   };
