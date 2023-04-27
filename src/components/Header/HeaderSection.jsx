@@ -20,12 +20,12 @@ const HeaderSection = () => {
 
   return (
     <div className='resume-header'>
-      <div className='header-name'>
+      <div className='header-top'>
         <EditField 
           value={headerInfo[0].name} 
           onTextChange={(newText) => handleHeaderUpdate('name', newText)}
-          textClass='name center'
-          inputClass='edit-name center'
+          textClass='header-name'
+          inputClass='edit-header-name'
         />
       </div>
       <div className='header-info'>

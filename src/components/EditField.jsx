@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 const EditField = ({ value, onTextChange, textClass, inputClass }) => {
 
-  const [editing, setEditing] = React.useState(false);
-  const [newText, setNewText] = React.useState(value);
-  const inputWidth = useInputWidth(newText);
-  const inputRef = React.useRef();
+  const [editing, setEditing] = useState(false);
+  const [newText, setNewText] = useState(value);
+  const [inputWidth, setInputWidth] = useState('auto');
+  const inputRef = useRef();
   
   const handleEdit = () => {
     setEditing(true);
@@ -16,13 +16,21 @@ const EditField = ({ value, onTextChange, textClass, inputClass }) => {
   }
 
   const handleSave = (e) => {
-    if (e.key === 'Enter') {
+    if ((e.type === 'keydown' && e.key === 'Enter') || (e.type === 'blur')) {
       onTextChange(newText);
       setEditing(false);
     }
   }
 
-  React.useEffect(() => {
+  useEffect(() => {
+    const span = document.createElement('span');
+    span.textContent = newText;
+    document.body.appendChild(span);
+    setInputWidth(span.offsetWidth + 2);
+    document.body.removeChild(span);
+  }, [newText]);
+
+  useEffect(() => {
     if (editing) {
       inputRef.current.focus();
     }
@@ -36,7 +44,8 @@ const EditField = ({ value, onTextChange, textClass, inputClass }) => {
           value={newText} 
           ref={inputRef}
           onChange={handleChange} 
-          onKeyDown={handleSave} 
+          onKeyDown={handleSave}
+          onBlur={handleSave} 
           className={inputClass}
           style={{ width: `${inputWidth}px`}}
         />
@@ -48,21 +57,5 @@ const EditField = ({ value, onTextChange, textClass, inputClass }) => {
     </>
   )
 }
-
-const useInputWidth = (newText) => {
-  const [inputWidth, setInputWidth] = React.useState('auto');
-
-  React.useEffect(() => {
-    const span = document.createElement('span');
-
-    span.textContent = newText;
-    document.body.appendChild(span);
-
-    setInputWidth(span.offsetWidth + 2);
-    document.body.removeChild(span);
-  }, [newText]);
-
-  return inputWidth;
-};
 
 export default EditField;
