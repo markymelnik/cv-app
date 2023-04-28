@@ -1,0 +1,42 @@
+.resume-education {
+  display: flex;
+  flex-direction: column;
+  min-height: 12%;
+  width: 100%;
+}
+
+.education-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 16px;
+  border-bottom: 1px solid black;
+}
+
+.education-subheader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; 
+}
+
+.education-info {
+  font-size: 14px;
+  transition: background-color 0.12s ease;
+}
+
+.education-info:hover {
+  background-color: lightgrey;
+  cursor: pointer;
+}
+
+.edit-education-info {
+  background-color: lightgrey;
+  border: none;
+  text-align: left;
+  font-size: 14px;
+}
+
+.education-description {
+  display: flex;
+  flex-direction: column;
+}

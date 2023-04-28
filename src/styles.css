@@ -7,6 +7,18 @@
 }
 
 #root {
+  
+}
+
+.title {
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-size: 40px;
+  padding: 20px;
+}
+
+.container {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -14,46 +26,64 @@
   align-items: center;
   width: 100%;
   height: 100vh;
+  background-color: rgb(228, 247, 255);
 }
 
-.tool-document {
+.control-document {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  gap: 8px;
   height: 792px;
-  width: 612px;
+  min-width: 306px;
   border: 1px solid black;
+  padding: 10px;
+  background-color: white;
+}
+
+.control-header {
+  font-size: 25px;
   padding: 10px;
 }
 
+.control-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 200px;
+}
+
 .toggle-btns-btn {
+  background-color: rgb(212, 238, 241);
   border: 1px solid black;
-  background-color: rgb(232, 210, 250);
-  height: 60px;
-  width: 140px;
+  border-radius: 20px;
+  height: 40px;
+  width: 160px;
+  font-size: 14px;
+  transition: font-size 0.05s ease;
 }
 
 .toggle-btns-btn:hover {
-  background-color: rgb(203, 171, 230);
+  background-color: rgb(167, 229, 236);
+  font-size: 15px;
   cursor: pointer;
 }
 
 .download-pdf-btn {
+  background-color: rgb(245, 170, 170);
   border: 1px solid black;
-  background-color: rgb(232, 210, 250);
-  height: 60px;
-  width: 140px;
+  border-radius: 20px;
+  height: 40px;
+  width: 160px;
+  font-size: 14px;
+  transition: font-size 0.05s ease;
 }
 
 .download-pdf-btn:hover {
-  background-color: rgb(203, 171, 230);
+  background-color: rgb(240, 129, 129);
+  font-size: 15px;
   cursor: pointer;
 }
-
-
-
 
 .resume-document {
   display: flex;
@@ -61,303 +91,11 @@
   gap: 8px;
   height: 792px;
   min-width: 612px;
+  max-width: 612px;
   border: 1px solid black;
   padding: 10px;
-}
-
-.add-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 15px;
-  width: 15px;
-  border: none;
-  font-size: 25px;
-  font-weight: bolder;
-  color: dodgerblue;
   background-color: white;
-  transition: font-size 0.08s ease;
 }
-
-.add-btn:hover {
-  font-size: 30px;
-  cursor: pointer;
-}
-
-.add-btn:active {
-  font-size: 25px;
-}
-
-.delete-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 15px;
-  width: 15px;
-  border: none;
-  font-size: 25px;
-  font-weight: bolder;
-  color: red;
-  background-color: white;
-  transition: font-size 0.08s ease;
-}
-
-.delete-btn:hover {
-  font-size: 30px;
-  cursor: pointer;
-}
-
-.delete-btn:active {
-  font-size: 25px;
-}
-
-.bullet-point {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-left: 10px;
-}
-
-.bullet-text {
-  font-size: 12px;
-  transition: background-color 0.12s ease;
-}
-
-.bullet-text:before {
-  content: '• ';
-}
-
-.bullet-text:hover {
-  background-color: lightgrey;
-  cursor: pointer;
-}
-
-.edit-bullet-text {
-  border: none;
-  text-align: left;
-  font-size: 12px;
-  background-color: lightgrey;
-}
-
-
-
-.resume-header {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  min-height: 6%;
-  width: 100%;
-}
-
-.header-top {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 100%;
-}
-
-.header-name {
-  font-size: 18px;
-}
-
-.header-name:hover {
-  background: lightgrey;
-  cursor: pointer;
-}
-
-.edit-header-name {
-  border: none;
-  font-size: 18px;
-  background-color: lightgrey;
-}
-
-.header-info {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  height: 20px;
-  width: 100%;
-}
-
-.header-subinfo {
-  font-size: 14px;
-  transition: background-color 0.12s ease;
-}
-
-.header-subinfo:hover {
-  background-color: lightgrey;
-  cursor: pointer;
-}
-
-.edit-header-subinfo {
-  border: none;
-  font-size: 14px;
-  background-color: lightgrey;
-}
-
-
-
-.resume-education {
-  display: flex;
-  flex-direction: column;
-  min-height: 12%;
-  width: 100%;
-}
-
-.education-header {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  font-size: 16px;
-  border-bottom: 1px solid black;
-}
-
-.education-subheader {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between; 
-}
-
-.education-info {
-  font-size: 14px;
-  transition: background-color 0.12s ease;
-}
-
-.education-info:hover {
-  background-color: lightgrey;
-  cursor: pointer;
-}
-
-.edit-education-info {
-  border: none;
-  text-align: left;
-  font-size: 14px;
-  background-color: lightgrey;
-}
-
-.education-description {
-  display: flex;
-  flex-direction: column;
-}
-
-
-
-.resume-experience {
-  display: flex;
-  flex-direction: column;
-  min-height: 50%;
-  width: 100%;
-}
-
-.experience-header {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 6px;
-  font-size: 16px;
-  border-bottom: 1px solid black;
-}
-
-.experience-subheader {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between; 
-}
-
-.experience-wrapper {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 4px;
-}
-
-.experience-block {
-  display: flex;
-  flex-direction: column;
-}
-
-.experience-info {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 14px;
-  transition: background-color 0.12s ease;
-}
-
-.experience-info:hover {
-  background: lightgrey;
-  cursor: pointer;
-}
-
-.edit-experience-info {
-  border: none;
-  text-align: left;
-  font-size: 15px;
-  background-color: lightgrey;
-}
-
-
-
-.resume-skills {
-  display: flex;
-  flex-direction: column;
-  height: 10%;
-  width: 100%;
-}
-
-.skills-header {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 6px;
-  font-size: 16px;
-  border-bottom: 1px solid black;
-}
-
-.skills-container {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding: 4px;
-}
-
-.skill-block {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  height: 20px;
-}
-
-.skills-container > *:not(:first-child)::before {
-  content: '\00a0•\00a0';
-}
-
-.skill-text {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  font-size: 14px;
-  transition: background-color 0.12s ease;
-}
-
-.skill-text:hover {
-  background-color: lightgrey;
-  cursor: pointer;
-}
-
-.edit-skill-text {
-  border: none;
-  font-size: 15px;
-  background-color: lightgrey;
-}
-
-
 
 .bold {
   font-weight: bold;
@@ -377,14 +115,4 @@
 
 .right {
   text-align: right;
-}
-
-
-
-.resume-skills .skill-block .delete-btn {
-  display: none;
-}
-
-.resume-skills .skill-block:hover .delete-btn {
-  display: flex;
 }

@@ -1,0 +1,56 @@
+.resume-header {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-height: 6%;
+  width: 100%;
+}
+
+.header-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.header-name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.header-name:hover {
+  background: lightgrey;
+  cursor: pointer;
+}
+
+.edit-header-name {
+  background-color: lightgrey;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.header-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  height: 20px;
+  width: 100%;
+}
+
+.header-subinfo {
+  font-size: 14px;
+  transition: background-color 0.12s ease;
+}
+
+.header-subinfo:hover {
+  background-color: lightgrey;
+  cursor: pointer;
+}
+
+.edit-header-subinfo {
+  background-color: lightgrey;
+  font-size: 14px;
+  border: none;
+}

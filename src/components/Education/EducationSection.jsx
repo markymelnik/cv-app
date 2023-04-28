@@ -1,14 +1,15 @@
 import React from "react";
-import EditField from "../EditField";
-import EditButton from "../EditButton";
-import BulletPoints from "../BulletPoints";
+import EditField from "../Editing/EditField";
+import EditButton from "../Editing/EditButton";
+import BulletPoints from "../BulletPoints/BulletPoints";
+import './educationSection.css';
 
 const EducationSection = ({ toggleButtons }) => {
   const [educationInfo, setEducationInfo] = React.useState([
     {
       schoolName: "Something University",
       attendRange: "20XX-20XX",
-      degree: "Bachelor of Science, Neuroscience",
+      degree: "Bachelor of Science, Degree",
     },
   ]);
 

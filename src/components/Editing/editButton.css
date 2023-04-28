@@ -1,0 +1,45 @@
+.add-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15px;
+  width: 15px;
+  border: none;
+  font-size: 25px;
+  font-weight: bolder;
+  color: dodgerblue;
+  background-color: white;
+  transition: font-size 0.08s ease;
+}
+
+.add-btn:hover {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.add-btn:active {
+  font-size: 25px;
+}
+
+.delete-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15px;
+  width: 15px;
+  border: none;
+  font-size: 25px;
+  font-weight: bolder;
+  color: red;
+  background-color: white;
+  transition: font-size 0.08s ease;
+}
+
+.delete-btn:hover {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.delete-btn:active {
+  font-size: 25px;
+}

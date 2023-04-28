@@ -12,9 +12,12 @@ const Controller = ({ onToggleButtons, resumeRef }) => {
   };
 
   return (
-    <div className="tool-document">
-      <button className='toggle-btns-btn' onClick={handleBtnClick}>{toggleBtnContent}</button>
-      <PDFDownload resumeRef={resumeRef} />
+    <div className="control-document">
+      <div className='control-header'>Control</div>
+      <div className='control-btns'>
+        <button className='toggle-btns-btn' onClick={handleBtnClick}>{toggleBtnContent}</button>
+        <PDFDownload resumeRef={resumeRef} />
+      </div>
     </div>
   );
 };

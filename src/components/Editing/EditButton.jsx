@@ -1,3 +1,5 @@
+import './editButton.css';
+
 const EditButton = ({ onBtnClick, cssClass, btnContent, toggleButtons }) => {
   return (
     <span>

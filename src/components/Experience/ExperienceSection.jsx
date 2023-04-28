@@ -1,19 +1,20 @@
 import React from "react";
-import EditField from "../EditField";
-import EditButton from "../EditButton";
-import BulletPoints from "../BulletPoints";
+import EditField from "../Editing/EditField";
+import EditButton from "../Editing/EditButton";
+import BulletPoints from "../BulletPoints/BulletPoints";
+import './experienceSection.css';
 
 const ExperienceSection = ({ toggleButtons }) => {
   const [experienceBlocks, setExperienceBlocks] = React.useState([]);
 
   const handleAddExperience = () => {
-    if (experienceBlocks.length > 5) return;
+    if (experienceBlocks.length > 7) return;
     setExperienceBlocks([
       ...experienceBlocks,
       {
-        companyName: "Apple",
+        companyName: "Company Name",
         workDateRange: "20XX-20XX",
-        jobTitle: "Software Developer",
+        jobTitle: "Job Title",
         bulletPoints: [],
       },
     ]);

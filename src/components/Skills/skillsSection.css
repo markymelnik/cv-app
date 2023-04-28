@@ -1,0 +1,62 @@
+.resume-skills {
+  display: flex;
+  flex-direction: column;
+  height: 10%;
+  width: 100%;
+}
+
+.skills-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+  font-size: 16px;
+  border-bottom: 1px solid black;
+}
+
+.skills-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 4px;
+}
+
+.skill-block {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+}
+
+.skills-container > *:not(:first-child)::before {
+  content: '\00a0•\00a0';
+}
+
+.skill-text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 14px;
+  transition: background-color 0.12s ease;
+}
+
+.skill-text:hover {
+  background-color: lightgrey;
+  cursor: pointer;
+}
+
+.edit-skill-text {
+  border: none;
+  font-size: 14px;
+  background-color: lightgrey;
+}
+
+.resume-skills .skill-block .delete-btn {
+  display: none;
+}
+
+.resume-skills .skill-block:hover .delete-btn {
+  display: flex;
+}

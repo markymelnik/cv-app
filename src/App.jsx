@@ -13,8 +13,11 @@ const App = () => {
 
   return (
     <>
-      <Controller onToggleButtons={handleToggleButtons} resumeRef={resumeRef} />
-      <Resume toggleButtons={toggleButtons} resumeRef={resumeRef} />
+      <div className='title'>EasyResume</div>
+      <div className='container'>
+        <Controller onToggleButtons={handleToggleButtons} resumeRef={resumeRef} />
+        <Resume toggleButtons={toggleButtons} resumeRef={resumeRef} />
+      </div>
     </>
   )
 }

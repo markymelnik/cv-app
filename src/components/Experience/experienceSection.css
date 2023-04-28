@@ -1,0 +1,54 @@
+.resume-experience {
+  display: flex;
+  flex-direction: column;
+  min-height: 50%;
+  width: 100%;
+}
+
+.experience-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+  font-size: 16px;
+  border-bottom: 1px solid black;
+}
+
+.experience-subheader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; 
+}
+
+.experience-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}
+
+.experience-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.experience-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  transition: background-color 0.12s ease;
+}
+
+.experience-info:hover {
+  background: lightgrey;
+  cursor: pointer;
+}
+
+.edit-experience-info {
+  border: none;
+  text-align: left;
+  font-size: 14px;
+  background-color: lightgrey;
+}

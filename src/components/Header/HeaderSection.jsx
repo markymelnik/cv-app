@@ -1,5 +1,6 @@
 import React from 'react';
-import EditField from '../EditField';
+import EditField from '../Editing/EditField';
+import './headerSection.css';
 
 const HeaderSection = () => {
 

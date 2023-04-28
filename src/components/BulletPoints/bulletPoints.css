@@ -1,0 +1,28 @@
+.bullet-point {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-left: 10px;
+}
+
+.bullet-text {
+  font-size: 12px;
+  transition: background-color 0.12s ease;
+}
+
+.bullet-text:before {
+  content: '• ';
+}
+
+.bullet-text:hover {
+  background-color: lightgrey;
+  cursor: pointer;
+}
+
+.edit-bullet-text {
+  border: none;
+  text-align: left;
+  font-size: 12px;
+  background-color: lightgrey;
+}

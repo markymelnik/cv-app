@@ -1,6 +1,7 @@
 import React from "react";
-import EditField from "../EditField";
-import EditButton from "../EditButton";
+import EditField from "../Editing/EditField";
+import EditButton from "../Editing/EditButton";
+import './skillsSection.css';
 
 const SkillsSection = ({ toggleButtons }) => {
   const [skills, setSkills] = React.useState([]);
@@ -13,7 +14,7 @@ const SkillsSection = ({ toggleButtons }) => {
   };
 
   const handleAddSkill = () => {
-    if (skills.length > 11) return;
+    if (skills.length > 15) return;
     setSkills([...skills, { text: "Edit Skill" }]);
   };
 

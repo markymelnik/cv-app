@@ -1,5 +1,6 @@
-import EditField from "./EditField";
-import EditButton from "./EditButton";
+import EditField from "../Editing/EditField";
+import EditButton from "../Editing/EditButton";
+import './bulletPoints.css';
 
 const BulletPoints = ({ bulletPoints, setBulletPoints, toggleButtons }) => {
   const handleBulletTextChange = (newText, bulletIndex) => {
